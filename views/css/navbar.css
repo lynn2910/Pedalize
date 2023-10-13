@@ -1,4 +1,16 @@
+:root {
+    --navbar-height: 100px;
+}
+
 #navbar {
-    height: 150px;
+    height: var(--navbar-height);
     background-color: #424242;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar .logo, #navbar .logo svg {
+    height: calc(var(--navbar-height)/2);
+    width: auto;
 }
