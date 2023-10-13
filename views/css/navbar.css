@@ -1,5 +1,6 @@
 :root {
     --navbar-height: 100px;
+    --navbar-margin-x: 10vw;
 }
 
 #navbar {
@@ -10,6 +11,7 @@
     justify-content: space-between;
     padding: 0 2rem;
     position: relative;
+    z-index: 3;
 }
 
 #navbar .logo, #navbar .logo svg {
@@ -25,8 +27,38 @@
 #navbar .burger-menu {
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 #navbar .buttons:not(.active) {
-    display: none;
+    transform: none;
+    z-index: -1;
+}
+
+#navbar .buttons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: var(--navbar-margin-x);
+    left: var(--navbar-margin-x);
+    transform: translateY(var(--navbar-height));
+    z-index: 2;
+    transition: all 200ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar .buttons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-inline-start: 0;
+    width: 100%;
+}
+
+#navbar .buttons li:hover {
+    text-decoration: underline;
 }
