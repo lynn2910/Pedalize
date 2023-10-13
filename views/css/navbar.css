@@ -4,13 +4,29 @@
 
 #navbar {
     height: var(--navbar-height);
-    background-color: #424242;
+    background-color: #0D0D0D;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 2rem;
+    position: relative;
 }
 
 #navbar .logo, #navbar .logo svg {
-    height: calc(var(--navbar-height)/2);
+    height: calc(var(--navbar-height)/3);
     width: auto;
+}
+
+#navbar .burger-menu img {
+    height: calc(var(--navbar-height)/2);
+    color: white;
+}
+
+#navbar .burger-menu {
+    background: transparent;
+    border: none;
+}
+
+#navbar .buttons:not(.active) {
+    display: none;
 }
