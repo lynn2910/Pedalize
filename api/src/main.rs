@@ -9,7 +9,6 @@ mod database;
 mod shopping_cart;
 mod clients;
 mod product;
-mod reviews;
 
 #[tokio::main]
 async fn main() {
@@ -34,6 +33,8 @@ async fn main() {
         .route("/product/page", get(product::routes::get_product_page))
         .route("/product/:id", get(product::routes::get_product_detail))
         .route("/product/:id/characteristics", get(product::routes::get_product_characteristics))
+        .route("/product/:id/reviews", get(product::routes::get_product_reviews))
+        .route("/product/:id/reviews", post(product::routes::new_review))
 
         .route("/test", get(|| async { "Hello, World!" }))
         .with_state(app_state);

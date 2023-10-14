@@ -41,12 +41,14 @@ CREATE OR REPLACE TABLE product_characteristic (
 -- Contient les avis d'un produit
 CREATE OR REPLACE TABLE reviews (
     id CHAR(36) NOT NULL,
+    product CHAR(36) NOT NULL,
     user CHAR(36),
     review VARCHAR(512),
-    note TINYINT,
+    stars TINYINT UNSIGNED NOT NULL DEFAULT 0,
 
-    CHECK (0 <= note <= 5),
-    FOREIGN KEY (user) REFERENCES clients (id) ON DELETE CASCADE ,
+    CHECK (0 <= stars <= 5),
+    FOREIGN KEY (user) REFERENCES clients (id) ON DELETE CASCADE,
+    FOREIGN KEY (product) REFERENCES product (id) ON DELETE CASCADE,
     PRIMARY KEY (id)
 );
 
@@ -108,3 +110,16 @@ INSERT INTO product (id, name, description, price, image) VALUES
 
 INSERT INTO product_characteristic (product, name, detail) VALUE
     ('f0e22302-db5c-4277-b890-9291ca89abb3', 'Capacité', '40L');
+
+
+SELECT
+    reviews.id AS id,
+    reviews.product AS product,
+    reviews.user AS user,
+    reviews.review AS review,
+    reviews.stars AS stars,
+    c.username AS username
+FROM
+    reviews
+LEFT JOIN clients c on reviews.user = c.id
+WHERE product = ?;
