@@ -94,3 +94,17 @@ INSERT INTO product VALUE (
     10,
     NULL
 );
+INSERT INTO product (id, name, description, price, image) VALUES
+    ('d2c0b25c-e39a-43d4-8f06-ce5ed2d7919c', 'Casque de cyclisme', 'Casque léger et aérodynamique pour une protection optimale lors de vos sorties à vélo.', 79.99, 'casque_cyclisme.jpg'),
+    ('dcfd55fd-5891-41a8-a5b4-9ee4ff00a576', 'Maillot de cyclisme', 'Maillot respirant en tissu technique pour une performance maximale sur la route.', 49.99, 'maillot_cyclisme.jpg'),
+    ('7a555048-64ae-4089-82de-2d9db6034e19', 'Pneus de vélo de route', 'Pneus haute performance offrant une adhérence exceptionnelle sur les routes asphaltées.', 29.99, 'pneus_route.jpg'),
+    ('3678c5c0-db86-4ef9-8bdd-c8b96affe2f7', 'Short de cyclisme', 'Short rembourré pour plus de confort pendant de longues balades à vélo.', 39.99, 'short_cyclisme.jpg'),
+    ('19a13f5d-8530-4da4-a1b8-ef42279dcffb', 'Gants de cyclisme', 'Gants ergonomiques avec rembourrage pour une meilleure prise en main du guidon.', 19.99, 'gants_cyclisme.jpg'),
+    ('749c5198-b498-4981-9e48-b95123a88775', 'Lunettes de soleil pour cyclistes', 'Lunettes polarisées pour protéger vos yeux des rayons UV pendant vos sorties en plein air.', 29.99, 'lunettes_cyclistes.jpg'),
+    ('f0e22302-db5c-4277-b890-9291ca89abb3', 'Sac à dos de cyclisme', 'Sac à dos léger et compact pour transporter vos affaires essentielles pendant vos trajets à vélo.', 49.99, 'sac_a_dos_cyclisme.jpg'),
+    ('b3343d89-d275-435f-be8e-0d69ae186f9f', 'Bidon d\'eau de cyclisme', 'Bidon de 750 ml avec une valve anti-fuite pour vous hydrater pendant vos sorties.', 9.99, 'bidon_cyclisme.jpg'),
+    ('97274f94-849f-4e01-b706-0374d06e30dc', 'Cadenas de vélo', 'Cadenas en acier durable pour protéger votre vélo contre le vol.', 19.99, 'cadenas_velo.jpg'),
+    ('32559cd1-cb95-4a69-bde1-66fd2b7e3212', 'Éclairage de vélo LED', 'Ensemble d\'éclairage avant et arrière pour assurer votre visibilité pendant vos sorties nocturnes.', 14.99, 'eclairage_velo.jpg');
+
+INSERT INTO product_characteristic (product, name, detail) VALUE
+    ('f0e22302-db5c-4277-b890-9291ca89abb3', 'Capacité', '40L');

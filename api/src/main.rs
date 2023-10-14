@@ -1,6 +1,5 @@
-use axum::handler::HandlerWithoutStateExt;
 use axum::Router;
-use axum::routing::{delete, get, patch, post, put};
+use axum::routing::{delete, get, patch, post};
 use tracing::info;
 use crate::database::Database;
 
@@ -10,6 +9,7 @@ mod database;
 mod shopping_cart;
 mod clients;
 mod product;
+mod reviews;
 
 #[tokio::main]
 async fn main() {
@@ -29,6 +29,12 @@ async fn main() {
         .route("/shopping_cart/articles/change_quantity", patch(shopping_cart::routes::edit_article_quantity))
         .route("/shopping_cart/articles/remove", delete(shopping_cart::routes::delete_article))
         .route("/shopping_cart/clear", delete(shopping_cart::routes::clear_articles))
+
+        .route("/product/all", get(product::routes::get_all_products))
+        .route("/product/page", get(product::routes::get_product_page))
+        .route("/product/:id", get(product::routes::get_product_detail))
+        .route("/product/:id/characteristics", get(product::routes::get_product_characteristics))
+
         .route("/test", get(|| async { "Hello, World!" }))
         .with_state(app_state);
 
