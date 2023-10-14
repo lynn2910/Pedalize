@@ -1,0 +1,1 @@
+pub(crate) type ProductId = String;
