@@ -146,3 +146,29 @@
     flex-direction: row-reverse;
     align-items: center;
 }
+
+
+@media (min-width: 1200px) {
+    main {
+        padding: 10px 75px;
+    }
+    .desktop_row {
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 50px;
+    }
+
+    .the_cart, .summary, .informations {
+        width: 40%;
+    }
+
+    .informations {
+        margin-right: auto;
+        margin-left: 5%;
+    }
+
+    .informations details summary::before {
+        right: 57%;
+    }
+}
