@@ -4,3 +4,24 @@ body {
     margin: 0;
     font-family: Poppins, sans-serif;
 }
+
+input {
+    padding: 15px 25px;
+    border: 1px solid #000;
+
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.35)
+}
+
+button {
+    padding: 15px 30px;
+    background: #000;
+    color: #fff;
+    border: none;
+
+    font-size: 18px;
+    font-weight: 600;
+}

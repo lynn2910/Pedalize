@@ -1,6 +1,8 @@
-const burger = document.querySelector("#navbar .burger-menu");
-const buttons = document.querySelector("#navbar .buttons");
+addEventListener("load", () => {
+    const burger = document.querySelector("#navbar .burger-menu");
+    const buttons = document.querySelector("#navbar .buttons");
 
-burger.addEventListener("click", () => {
-    buttons.classList.toggle("active");
-});
+    burger.addEventListener("click", () => {
+        buttons.classList.toggle("active");
+    });
+})
