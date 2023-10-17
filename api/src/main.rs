@@ -1,5 +1,8 @@
+use axum::http::Method;
 use axum::Router;
 use axum::routing::{delete, get, patch, post};
+use tower_http::cors::{Any, CorsLayer};
+use tower_http::trace::TraceLayer;
 use tracing::info;
 use crate::database::Database;
 
@@ -37,6 +40,8 @@ async fn main() {
         .route("/product/:id/reviews", post(product::routes::new_review))
 
         .route("/test", get(|| async { "Hello, World!" }))
+        .layer(CorsLayer::new().allow_origin(Any).allow_methods([Method::GET, Method::DELETE, Method::POST]))
+        .layer(TraceLayer::new_for_http())
         .with_state(app_state);
 
     info!(target: "App", "Running on 0.0.0.0:9999");
