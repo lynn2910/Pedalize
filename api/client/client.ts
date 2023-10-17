@@ -157,6 +157,26 @@ class PedalizeApi {
         }
     }
 
+    async remove_cart_article(id: string): Promise<string> {
+        const req = new RequestBuilder(`${this.config.host}/shopping_cart/articles/remove`);
+        req.set_method("DELETE");
+        req.set_body(
+            new URLSearchParams({
+                product: id
+            })
+        );
+        //req.add_header("Content-Type:", "application/x-www-form-urlencoded")
+
+        console.log(req)
+
+        try {
+            const res = await req.send();
+            return await res.text();
+        } catch (error) {
+            console.error(error);
+            return error;
+        }
+    }
 
     async clear_shopping_cart(): Promise<Option<Product[]>> {
         const req = new RequestBuilder(`${this.config.host}/shopping_cart/clear`);
@@ -181,7 +201,8 @@ type Method = "GET" | "POST" | "PUT" | "DELETE";
 class RequestBuilder {
     private readonly url: string;
     private method: Method | null;
-    private body: string | null;
+    private body: string | URLSearchParams | null;
+    private headers: Record<string, string>
 
     /**
      * Creates a new instance of the constructor.
@@ -206,8 +227,15 @@ class RequestBuilder {
      *
      * @param {string} body - The body to be set.
      */
-    set_body(body: string) {
+    set_body(body: string | URLSearchParams) {
         this.body = body;
+    }
+
+    add_header(key: string, value: string) {
+        if (!this.headers)
+            this.headers = {};
+
+        this.headers[key] = value;
     }
 
     /**
@@ -216,10 +244,14 @@ class RequestBuilder {
      * @return {Promise<Response>} A promise that resolves to a Response object representing the response to the request.
      */
     send(): Promise<Response> {
-        return fetch(this.url, {
+        let config: RequestInit = {
             method: this.method || "GET",
-            body: this.body || null
-        })
+            body: this.body || null,
+        };
+        if (this.headers) {
+            config.headers = this.headers
+        }
+        return fetch(this.url, config)
     }
 }
 
