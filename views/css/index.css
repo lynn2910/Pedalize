@@ -1,0 +1,40 @@
+.center{
+    display: block;
+    margin: 0 auto;
+}
+
+.button-magasin {
+    background-color: #ffffff; /* Couleur de fond du bouton */
+    color: #000000; /* Couleur de la police du bouton */
+    font-family: Arial, sans-serif; /* Police du texte du bouton */
+    font-size: 16px; /* Taille de la police */
+    border-radius: 1px; /* Coins arrondis du bouton */
+    padding: 10px 20px; /* Rembourrage (espace à l'intérieur du bouton) */
+    border: 1px solid #000; /* Bordure noire de 2 pixels */
+    cursor: pointer; /* Changement du curseur lors du survol du bouton */
+}
+
+.button-magasin:hover {
+    background-color: #cacbcc; /* Couleur de fond au survol du bouton */
+}
+
+.img-intro{
+    width: 1114px;
+}
+
+div{
+    margin: 10px 0px 10px 0px;
+}
+
+.container-center{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-direction: column;
+}
+
+.flex-marques {
+    margin: 10px; /* Espace entre les éléments */
+    padding: 10px; /* Espace à l'intérieur des éléments */
+    border: 1px solid #000; /* Bordure pour chaque élément */
+}
