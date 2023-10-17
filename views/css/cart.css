@@ -16,6 +16,13 @@
     width: 100%;
 }
 
+.the_cart .product_list p.no_product {
+    font-weight: 700;
+    border-top: 1px solid #909090;
+    border-bottom: 1px solid #909090;
+    padding: 25px 0;
+}
+
 .the_cart .product_list .product {
     display: flex;
     flex-direction: row;
@@ -30,6 +37,7 @@
     height: 133px;
     width: 129px;
 
+    background: url("../static/img/no-photo.png"); /* TODO */
     background-size: cover;
 }
 
@@ -148,7 +156,7 @@
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     main {
         padding: 10px 75px;
     }

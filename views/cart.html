@@ -37,29 +37,32 @@
                 <h1>Votre panier</h1>
                 <p>Vous n'êtes pas prêt à passer à la caisse ? <a id="continue_shopping" href="product_page.html">Continuer vos achats</a></p>
 
-                <div class="product_list">
-                    <div class="product">
-                        <div class="img" style="background: center url('static/img/test.jpg')"></div>
-                        <div class="infos">
-                            <h2>Name</h2>
-                            <p>Quantité : 3</p>
-                            <h3>56€</h3>
-                        </div>
-                        <div class="remove">
-                            <p>Supprimer</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img" style="background: center url('static/img/test.jpg')"></div>
-                        <div class="infos">
-                            <h2>Name</h2>
-                            <p>Quantité : 3</p>
-                            <h3>56€</h3>
-                        </div>
-                        <div class="remove">
-                            <p>Supprimer</p>
-                        </div>
-                    </div>
+                <div class="product_list" id="product_container">
+
+                    <p class='no_product'>Aucun produit n'a été ajouté dans votre panier pour le moment</p>
+
+<!--                    <div class="product">-->
+<!--                        <div class="img" style="background: center url('static/img/test.jpg')"></div>-->
+<!--                        <div class="infos">-->
+<!--                            <h2>Name</h2>-->
+<!--                            <p>Quantité : 3</p>-->
+<!--                            <h3>56€</h3>-->
+<!--                        </div>-->
+<!--                        <div class="remove">-->
+<!--                            <p>Supprimer</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product">-->
+<!--                        <div class="img"></div>-->
+<!--                        <div class="infos">-->
+<!--                            <h2>Name</h2>-->
+<!--                            <p>Quantité : 3</p>-->
+<!--                            <h3>56€</h3>-->
+<!--                        </div>-->
+<!--                        <div class="remove">-->
+<!--                            <p>Supprimer</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
 
@@ -75,7 +78,7 @@
                 <div class="prices">
                     <div class="full">
                         <p>Subtotal</p>
-                        <p class="margin">200€</p>
+                        <p class="margin" id="price">200€</p>
                     </div>
                     <div class="full">
                         <p>Transport</p>
@@ -84,7 +87,7 @@
                     <div class="sep"></div>
                     <div class="full">
                         <p>Total</p>
-                        <p class="margin">200€</p>
+                        <p class="margin" id="total_price">200€</p>
                     </div>
                 </div>
 
@@ -108,5 +111,6 @@
     </main>
 
     <script src="js/burger-menu.js"></script>
+    <script src="js/cart.js" type="module"></script>
 </body>
 </html>
