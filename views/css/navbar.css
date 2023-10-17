@@ -12,6 +12,11 @@
     padding: 0 2rem;
     position: relative;
     z-index: 3;
+    transition: all 200ms ease;
+}
+
+#navbar.active {
+    margin-bottom: var(--navbar-height);
 }
 
 #navbar .logo, #navbar .logo svg {
@@ -47,6 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 #navbar .buttons ul {
@@ -61,4 +67,49 @@
 
 #navbar .buttons li:hover {
     text-decoration: underline;
+}
+
+#navbar .desktop-right {
+    display: none;
+}
+
+@media screen and (min-width: 1240px) {
+    #navbar .buttons:not(.active), #navbar .buttons.active {
+        display: block;
+        z-index: 2;
+        color: gainsboro;
+        position: static;
+        display: flex;
+        width: 370px;
+    }
+
+    #navbar .buttons:not(.active):hover, #navbar .buttons.active:hover {
+        color: white;
+    }
+
+    #navbar .burger-menu {
+        display: none;
+    }
+
+    #navbar .desktop-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbar .desktop-right .market-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar .desktop-right .log-in__button {
+        margin-left: 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    #navbar .desktop-right .log-in__green {
+        color: green;
+    }
 }
