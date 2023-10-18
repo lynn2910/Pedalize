@@ -16,7 +16,7 @@
 }
 
 #navbar.active {
-    margin-bottom: var(--navbar-height);
+    margin-bottom: calc(var(--navbar-height) + 20px);
 }
 
 #navbar .logo, #navbar .logo svg {
@@ -50,6 +50,7 @@
     z-index: 2;
     transition: all 200ms ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
@@ -72,6 +73,17 @@
 #navbar .desktop-right {
     display: none;
 }
+
+#navbar .buttons a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+#navbar .buttons a span{
+    color: green;
+}
+
 
 @media screen and (min-width: 1240px) {
     #navbar .buttons:not(.active), #navbar .buttons.active {
@@ -111,5 +123,9 @@
 
     #navbar .desktop-right .log-in__green {
         color: green;
+    }
+
+    #navbar .buttons a {
+        display: none;
     }
 }

@@ -7,5 +7,12 @@ addEventListener("load", () => {
         buttons.classList.toggle("active");
         nav.classList.toggle("active");
     });
-})
+
+    addEventListener("resize", () => {
+        if (window.innerWidth > 1240) {
+            buttons.classList.remove("active");
+            nav.classList.remove("active");
+        }
+    })
+});
 
