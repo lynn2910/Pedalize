@@ -24,6 +24,19 @@
     width: auto;
 }
 
+#navbar .graphic-logo {
+    display: none;
+}
+
+#navbar .graphic-logo img {
+    width: 7rem;
+}
+
+#navbar .left {
+    display: flex;
+    align-items: center;
+}
+
 #navbar .burger-menu img {
     height: calc(var(--navbar-height)/2);
     color: white;
@@ -33,6 +46,10 @@
     background: transparent;
     border: none;
     cursor: pointer;
+}
+
+#navbar .buttons .desktop-search {
+    display: none;
 }
 
 #navbar .buttons:not(.active) {
@@ -90,13 +107,56 @@
 
 
 @media screen and (min-width: 1240px) {
-    #navbar .buttons:not(.active), #navbar .buttons.active {
+    #navbar .graphic-logo {
         display: block;
+        margin-right: 15px;
+    }
+
+    #navbar .buttons:not(.active), #navbar .buttons.active {
         z-index: 2;
         color: gainsboro;
         position: static;
         display: flex;
-        width: 370px;
+        flex-direction: row;
+    }
+
+    #navbar .buttons .desktop-search {
+        display: block;
+    }
+
+    #navbar .buttons .desktop-search {
+        position: relative;
+        border-radius: 15px;
+        background-color: #1E1E1E;
+        color: #fff;
+    }
+
+    #navbar .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    #navbar .buttons .desktop-search input {
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        height: 5px;
+        background: transparent;
+        color: #fff;
+    }
+
+    #navbar .buttons .desktop-search input::placeholder {
+        color: #979797;
+    }
+
+    #navbar .buttons li {
+        margin: 0 10px;
+    }
+
+    #navbar .buttons li {
+        margin: 0 10px;
     }
 
     #navbar .buttons:not(.active):hover, #navbar .buttons.active:hover {
