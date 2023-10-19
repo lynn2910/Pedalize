@@ -26,6 +26,7 @@
 
     section.container-events button.button-discover {
         font-size: 20px;
+        width: 400px;
     }
 
     #tel {
@@ -54,19 +55,19 @@
 /* Version téléphone*/
 @media (max-width: 1024px) {
     p {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     h1 {
-        font-size: 60px;
-    }
-
-    h2 {
         font-size: 50px;
     }
 
-    h3 {
+    h2 {
         font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
     }
 
     body {
@@ -84,10 +85,11 @@
         justify-content: center; /* Centre horizontalement */
         align-items: center; /* Centre verticalement */
         flex-direction: column;
-    }
+    }²
 
     section.container-events button.button-discover {
-        font-size: 25px;
+        font-size: 20px;
+        width: 250px;
     }
 }
 
@@ -168,7 +170,7 @@ section.container-events button.button-discover {
     color: #000000; /* Couleur de la police du bouton */
     font-family: Arial, sans-serif; /* Police du texte du bouton */
     /*font-size: 25px; /* Taille de la police */
-    width: 400px;
+    /*width: 400px;*/
     height: auto;
     border-radius: 20px; /* Coins arrondis du bouton */
     padding: 8px 18px; /* Rembourrage (espace à l'intérieur du bouton) */
