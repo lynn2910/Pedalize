@@ -16,7 +16,7 @@
 }
 
 #navbar.active {
-    margin-bottom: calc(var(--navbar-height) + 20px);
+    margin-bottom: 240px;
 }
 
 #navbar .logo, #navbar .logo svg {
@@ -36,7 +36,7 @@
 }
 
 #navbar .buttons:not(.active) {
-    transform: none;
+    transform: translateY(-500%);
     z-index: -1;
 }
 
@@ -58,12 +58,16 @@
 
 #navbar .buttons ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     padding-inline-start: 0;
     width: 100%;
+}
+
+#navbar .buttons li {
+    margin: 16px 0;
 }
 
 #navbar .buttons li:hover {
@@ -123,6 +127,14 @@
 
     #navbar .desktop-right .log-in__green {
         color: green;
+    }
+
+    #navbar .buttons:not(.active) {
+        transform: none;
+    }
+
+    #navbar .buttons ul {
+        flex-direction: row;
     }
 
     #navbar .buttons a {
