@@ -1,29 +1,100 @@
-/* A CHANGER EN FONCTION SI PC OU TEL */
-p {
-    font-size: 30px;
+/* Responsivité */
+
+/* Version ordinateur*/
+@media (min-width: 1024px) {
+    p {
+        font-size: 20px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 30px;
+    }
+    
+    body {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    section.container-events button.button-discover {
+        font-size: 20px;
+    }
+
+    #tel {
+        display: none;
+    }
+
+    .container-center{
+        display: flex;
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        flex-direction: row;
+    }
+
+    .event {
+        display: flex;
+        flex-direction: row;
+        justify-content: justify; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+    }
+    .column-align {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-h1 {
+/* Version téléphone*/
+@media (max-width: 1024px) {
+    p {
+        font-size: 30px;
+    }
 
-}
+    h1 {
+        font-size: 60px;
+    }
 
-h2 {
-    font-size: 50px;
-}
+    h2 {
+        font-size: 50px;
+    }
 
-h3 {
-    font-size: 40px;
-}
+    h3 {
+        font-size: 40px;
+    }
 
-body {
-    width: 100%;
-    height: auto;
-    margin: auto;
+    body {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    #ordi {
+        display: none;
+    }
+
+    .container-center{
+        display: flex;
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        flex-direction: column;
+    }
+
+    section.container-events button.button-discover {
+        font-size: 25px;
+    }
 }
 
 .center{
     display: block;
     margin: 0 auto;
+    width: auto;
 }
 
 .txt-white {
@@ -49,21 +120,9 @@ body {
     background-color: #cacbcc; /* Couleur de fond au survol du bouton */
 }
 
-.img-intro{
-    width: 600px;
-    height: auto;
-}
-
-.container-center{
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    flex-direction: column;
-}
-
 .flex-marques {
-    margin: 3px; /* Espace entre les éléments */
-    padding: 3px; /* Espace à l'intérieur des éléments */
+    margin: 7px; /* Espace entre les éléments */
+    padding: 7px; /* Espace à l'intérieur des éléments */
     /*border: 1px solid #000; /* Bordure pour chaque élément */
 }
 
@@ -81,7 +140,8 @@ section.container-events hr.light-line {
 
 section.container-events img {
     display: block;
-    margin: 30px auto;
+    margin: 40px auto;
+    padding: 0px 20% 0px 20%;
 }
 
 section.container-events h3 {
@@ -107,11 +167,11 @@ section.container-events button.button-discover {
     background-color: #5EB10B; /* Couleur de fond du bouton */
     color: #000000; /* Couleur de la police du bouton */
     font-family: Arial, sans-serif; /* Police du texte du bouton */
-    font-size: 25px; /* Taille de la police */
-    width: 400px; 
+    /*font-size: 25px; /* Taille de la police */
+    width: 400px;
     height: auto;
     border-radius: 20px; /* Coins arrondis du bouton */
-    padding: 10px 20px; /* Rembourrage (espace à l'intérieur du bouton) */
+    padding: 8px 18px; /* Rembourrage (espace à l'intérieur du bouton) */
     cursor: pointer; /* Changement du curseur lors du survol du bouton */
 }
 
