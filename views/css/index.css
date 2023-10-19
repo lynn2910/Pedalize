@@ -1,6 +1,37 @@
+/* A CHANGER EN FONCTION SI PC OU TEL */
+p {
+    font-size: 30px;
+}
+
+h1 {
+
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
 .center{
     display: block;
     margin: 0 auto;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.txt-align {
+    text-align: center;
 }
 
 .button-magasin {
@@ -19,7 +50,7 @@
 }
 
 .img-intro{
-    width: 390px;
+    width: 600px;
     height: auto;
 }
 
@@ -34,4 +65,56 @@
     margin: 3px; /* Espace entre les éléments */
     padding: 3px; /* Espace à l'intérieur des éléments */
     /*border: 1px solid #000; /* Bordure pour chaque élément */
+}
+
+section.container-events {
+    background-color: #2D2A2A ;
+}
+
+section.container-events hr.light-line {
+    width: 60%; /* Définissez la longueur souhaitée en pourcentage ou en pixels */
+    height: 2px; /* Définissez l'épaisseur souhaitée en pixels */
+    background-color: #ffffff; /* Couleur de la ligne */
+    border-radius: 5%; /* Bordure cassée*/
+    margin: 0 auto; /* Centre la ligne horizontalement si la largeur est inférieure à 100% */
+}
+
+section.container-events img {
+    display: block;
+    margin: 30px auto;
+}
+
+section.container-events h3 {
+    text-align: left;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0px 20% 0px 20%;
+}
+
+section.container-events p {
+    text-align: justify;
+    color: #ffffff;
+    size: 32px;
+    padding: 0px 20% 0px 20%;
+}
+
+section.container-events a {
+    color: #000000;
+    text-decoration: none;
+}
+
+section.container-events button.button-discover {
+    background-color: #5EB10B; /* Couleur de fond du bouton */
+    color: #000000; /* Couleur de la police du bouton */
+    font-family: Arial, sans-serif; /* Police du texte du bouton */
+    font-size: 25px; /* Taille de la police */
+    width: 400px; 
+    height: auto;
+    border-radius: 20px; /* Coins arrondis du bouton */
+    padding: 10px 20px; /* Rembourrage (espace à l'intérieur du bouton) */
+    cursor: pointer; /* Changement du curseur lors du survol du bouton */
+}
+
+.button-discover:hover {
+    background-color: #6fcf0e; /* Couleur de fond au survol du bouton */
 }
