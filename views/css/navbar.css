@@ -1,5 +1,5 @@
 :root {
-    --navbar-height: 100px;
+    --navbar-height: 80px;
     --navbar-margin-x: 10vw;
 }
 
@@ -103,6 +103,12 @@
 
 #navbar .buttons a span{
     color: green;
+}
+
+#navbar .buttons.active {
+    height: max-content;
+    padding-bottom: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 
