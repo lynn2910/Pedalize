@@ -155,7 +155,7 @@ section.container-events p {
     padding: 0px 10% 0px 10%;
 }
 
-section.container-events a {
+a {
     color: #000000;
     text-decoration: none;
 }
@@ -176,6 +176,6 @@ section.container-events button.button-discover {
     cursor: pointer; /* Changement du curseur lors du survol du bouton */
 }
 
-.button-discover:hover {
+section.container-events button.button-discover:hover {
     background-color: #6fcf0e; /* Couleur de fond au survol du bouton */
 }
