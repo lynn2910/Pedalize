@@ -37,6 +37,11 @@
     align-items: center;
 }
 
+#navbar .left .logo-pedalize {
+    display: flex;
+    align-items: center;
+}
+
 #navbar .burger-menu img {
     height: calc(var(--navbar-height)/2);
     color: white;
@@ -112,7 +117,7 @@
 }
 
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
     #navbar .graphic-logo {
         display: block;
         margin-right: 15px;
