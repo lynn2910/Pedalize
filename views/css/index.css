@@ -1,3 +1,9 @@
+body {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
 /* Responsivité */
 
 /* Version ordinateur*/
@@ -18,15 +24,9 @@
         font-size: 30px;
     }
     
-    body {
-        width: 100%;
-        height: auto;
-        margin: auto;
-    }
-
     section.container-events button.button-discover {
         font-size: 20px;
-        width: 400px;
+        width: 150px;
     }
 
     #tel {
@@ -46,6 +46,7 @@
         justify-content: justify; /* Centre horizontalement */
         align-items: center; /* Centre verticalement */
     }
+
     .column-align {
         display: flex;
         flex-direction: column;
@@ -54,26 +55,20 @@
 
 /* Version téléphone*/
 @media (max-width: 1024px) {
-    p {
+    main.p {
         font-size: 15px;
     }
 
-    h1 {
+    main.h1 {
+        font-size: 60px;
+    }
+
+    main.h2 {
         font-size: 50px;
     }
 
-    h2 {
+    main.h3 {
         font-size: 40px;
-    }
-
-    h3 {
-        font-size: 30px;
-    }
-
-    body {
-        width: 100%;
-        height: auto;
-        margin: auto;
     }
 
     #ordi {
@@ -85,11 +80,11 @@
         justify-content: center; /* Centre horizontalement */
         align-items: center; /* Centre verticalement */
         flex-direction: column;
-    }²
+    }
 
     section.container-events button.button-discover {
         font-size: 20px;
-        width: 250px;
+        width: 150px;
     }
 }
 
@@ -143,26 +138,30 @@ section.container-events hr.light-line {
 section.container-events img {
     display: block;
     margin: 40px auto;
-    padding: 0px 20% 0px 20%;
+    padding: 0px 10% 0px 10%;
 }
 
 section.container-events h3 {
     text-align: left;
     color: #ffffff;
     font-weight: bold;
-    padding: 0px 20% 0px 20%;
+    padding: 0px 10% 0px 10%;
 }
 
 section.container-events p {
     text-align: justify;
     color: #ffffff;
     size: 32px;
-    padding: 0px 20% 0px 20%;
+    padding: 0px 10% 0px 10%;
 }
 
 section.container-events a {
     color: #000000;
     text-decoration: none;
+}
+
+section.container-events section.event {
+    margin: 0px 10% 0px 10%;
 }
 
 section.container-events button.button-discover {
@@ -173,7 +172,7 @@ section.container-events button.button-discover {
     /*width: 400px;*/
     height: auto;
     border-radius: 20px; /* Coins arrondis du bouton */
-    padding: 8px 18px; /* Rembourrage (espace à l'intérieur du bouton) */
+    padding: 4px 12px; /* Rembourrage (espace à l'intérieur du bouton) */
     cursor: pointer; /* Changement du curseur lors du survol du bouton */
 }
 
