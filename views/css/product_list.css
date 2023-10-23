@@ -29,9 +29,12 @@
     margin-left: auto;
 }
 
-.list .product img {
-    width: 100%;
-    height: 100%;
+.list .product img, .list .product .img {
+    height: 133px;
+    width: 129px;
+
+    background: url("../static/img/no-photo.png");
+    background-size: cover;
 }
 
 .list .product h2 {

@@ -37,7 +37,7 @@
     height: 133px;
     width: 129px;
 
-    background: url("../static/img/no-photo.png"); /* TODO */
+    background: url("../static/img/no-photo.png");
     background-size: cover;
 }
 
