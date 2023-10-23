@@ -266,9 +266,69 @@ button {
 
 details.select {
     border: 1px solid #000;
-    border-radius: 0;
+    border-radius: 7px;
+
     padding: 15px 20px;
+    margin-bottom: 0;
+
+    width: 210px;
+
+    background: #fff;
 }
 
+details.select summary {
+    list-style: none;
+    user-select: none;
 
-details.select {}
+    width: 200px;
+}
+
+details[open].select {
+    border-bottom: none;
+    border-radius: 7px 7px 0 0;
+}
+
+details.select .list {
+    background: #fff;
+    transform: translateY(13px) translateX(-21px);
+
+    width: 250px;
+    position: absolute;
+    z-index: 10;
+
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+
+    border: 1px solid #000;
+    border-radius: 0 0 7px 7px;
+    border-top: none;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+details.select .list li {
+    padding: 5px 0 5px 10px;
+    margin: 0;
+
+    width: calc(100% - 10px);
+}
+
+details.select .list li:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+details.select summary::-webkit-details-marker {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+
+    details.select {
+        width: 233px;
+    }
+}
