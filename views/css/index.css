@@ -25,7 +25,7 @@ body {
     }
     
     section.container-events button.button-discover {
-        font-size: 20px;
+        font-size: 18px;
         width: 150px;
     }
 
@@ -124,7 +124,7 @@ body {
 }
 
 section.container-events {
-    background-color: #2D2A2A ;
+    background-color: #3e3a3a ;
 }
 
 section.container-events hr.light-line {
@@ -156,7 +156,7 @@ section.container-events p {
 }
 
 a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -166,12 +166,12 @@ section.container-events section.event {
 
 section.container-events button.button-discover {
     background-color: #5EB10B; /* Couleur de fond du bouton */
-    color: #000000; /* Couleur de la police du bouton */
+    color: #ffffff; /* Couleur de la police du bouton */
     font-family: Arial, sans-serif; /* Police du texte du bouton */
     /*font-size: 25px; /* Taille de la police */
     /*width: 400px;*/
     height: auto;
-    border-radius: 20px; /* Coins arrondis du bouton */
+    border-radius: 15px; /* Coins arrondis du bouton */
     padding: 4px 12px; /* Rembourrage (espace à l'intérieur du bouton) */
     cursor: pointer; /* Changement du curseur lors du survol du bouton */
 }
