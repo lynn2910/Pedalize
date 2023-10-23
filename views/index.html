@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/globals.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>Pedalize</title>
 </head>
 <body>
@@ -55,7 +56,7 @@
 <main class="accueil">
     <br>
 
-    <section class="main-part">
+    <section>
         <img class="center" src="static/img/logo-accueil.svg" alt="Logo officiel de Pedalize">
 
         <br><br>
@@ -180,7 +181,39 @@
 
     </section>
 </main>
-    
+<footer>
+    <section class="newsletter">
+        <div class="newsletter">
+            <h1 class="newsletter">Suivre notre actualité</h1>
+            <p class="newsletter">Pedalize s'engage pour vous offrir le meilleur du monde du vélo</p>
+            <form class="newsletter" method="POST" action="footer.html">
+                <input type="email"  class="newsletter" name="email" placeholder="Adresse e-mail">
+                <button type="submit" class="newsletter">S'enregistrer</button>
+            </form>
+        </div>
+    </section>
+    <section class="link">
+        <div class="shop">
+            <p class="shop">Magasin</p>
+            <a href="?" class="footer_link">Homme</a>
+            <a href="?" class="footer_link">Femme</a>
+            <a href="?" class="footer_link">Enfant</a>
+        </div>
+        <div class="actus">
+            <p class="actus">Actualité</p>
+            <a href="?" class="footer_link">Rampage</a>
+            <a href="?" class="footer_link">Montain of hell</a>
+            <a href="?" class="footer_link">Megavalanche</a>
+            <a href="?" class="footer_link">Enduro du lion</a>
+        </div>
+        <div class="cart">
+            <p>Achats</p>
+            <a href="?" class="footer_link">Votre panier</a>
+            <a href="?" class="footer_link">Cartes cadeaux</a>
+        </div>
+    </section>
+</footer>
+
 <script src="js/burger-menu.js" defer></script>
 
 </body>
