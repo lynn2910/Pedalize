@@ -84,13 +84,24 @@ body {
 
     section.container-events button.button-discover {
         font-size: 15px;
+        width: 180px;
+    }
+
+    section.container-events section.event img {
         width: 150px;
+        height: auto;
     }
 }
 
 .center{
     display: block;
     margin: 0 auto;
+    width: auto;
+}
+
+.left{
+    display: block;
+    margin: 0px 10% 0 10%;
     width: auto;
 }
 
@@ -104,7 +115,7 @@ body {
 
 .button-magasin {
     background-color: #ffffff; /* Couleur de fond du bouton */
-    color: #000000; /* Couleur de la police du bouton */
+    color: #0D0D0D; /* Couleur de la police du bouton */
     font-family: Arial, sans-serif; /* Police du texte du bouton */
     font-size: 16px; /* Taille de la police */
     border-radius: 1px; /* Coins arrondis du bouton */
@@ -124,7 +135,7 @@ body {
 }
 
 section.container-events {
-    background-color: #3e3a3a ;
+    background-color: #0D0D0D ;
 }
 
 section.container-events hr.light-line {
