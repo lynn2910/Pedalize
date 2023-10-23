@@ -60,6 +60,25 @@ class PedalizeApi {
         });
     }
     /**
+     * Retrieves all products from the server.
+     *
+     * @returns {Promise<Option<Product[]>>} - A promise that resolves to an array of products, or an error if the request fails.
+     */
+    get_products() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const req = new RequestBuilder(`${this.config.host}/product/all`);
+            req.set_method("GET");
+            try {
+                const res = yield req.send();
+                return yield res.json();
+            }
+            catch (error) {
+                console.error(error);
+                return error;
+            }
+        });
+    }
+    /**
      * Retrieves the characteristics of a product specified by its ID.
      *
      * @param {string} id - The ID of the product.

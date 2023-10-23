@@ -8,44 +8,44 @@
     <title>Pedalize's Products</title>
 </head>
 <body>
-<nav id="navbar">
-    <section class="left">
-        <div class="graphic-logo">
-            <img src="./static/img/logo-pedalize.svg" alt="Pedalize">
-        </div>
+    <nav id="navbar">
+        <section class="left">
+            <div class="graphic-logo">
+                <img src="./static/img/logo-pedalize.svg" alt="Pedalize">
+            </div>
 
-        <div class="logo-pedalize">
-            <img src="static/img/graphic-logo-pedalize.svg" alt="Pedalize">
-        </div>
-    </section>
+            <div class="logo-pedalize">
+                <img src="static/img/graphic-logo-pedalize.svg" alt="Pedalize">
+            </div>
+        </section>
 
-    <section class="buttons">
-        <ul>
-            <li><a href="./product_page.html">Boutique</a></li>
-            <li><a href="./index.html">Notre savoir faire</a></li>
-            <li>Contact</li>
-        </ul>
-        <a href="">Log<span>in</span></a>
-        <div class="desktop-search">
-            <img class="search-icon" src="./static/img/search-icon.svg" alt="search icon">
-            <input type="text" placeholder="Rechercher">
-        </div>
-    </section>
+        <section class="buttons">
+            <ul>
+                <li><a href="./product_page.html">Boutique</a></li>
+                <li><a href="./index.html">Notre savoir faire</a></li>
+                <li>Contact</li>
+            </ul>
+            <a href="">Log<span>in</span></a>
+            <div class="desktop-search">
+                <img class="search-icon" src="./static/img/search-icon.svg" alt="search icon">
+                <input type="text" placeholder="Rechercher">
+            </div>
+        </section>
 
-    <section class="right">
-        <button class="burger-menu">
-            <img src="static/img/burger-menu-icon.svg" alt="Burger menu">
-        </button>
-        <div class="desktop-right">
-            <a href="cart.html" class="market-logo">
-                <img src="static/img/market-logo.svg" alt="market logo">
-            </a>
-            <a href="" class="log-in__button">
-                log<span class="log-in__green">in</span>
-            </a>
-        </div>
-    </section>
-</nav>
+        <section class="right">
+            <button class="burger-menu">
+                <img src="static/img/burger-menu-icon.svg" alt="Burger menu">
+            </button>
+            <div class="desktop-right">
+                <a href="cart.html" class="market-logo">
+                    <img src="static/img/market-logo.svg" alt="market logo">
+                </a>
+                <a href="" class="log-in__button">
+                    log<span class="log-in__green">in</span>
+                </a>
+            </div>
+        </section>
+    </nav>
     <div class="container">
         <div class="filters">
             <div class="top">
@@ -109,48 +109,9 @@
                 </details>
             </div>
         </div>
-        <div class="list">
-            <a href="product_page.html">
-                <div class="product">
-                    <img src="static/img/intro-site.png" alt="intro-site">
-                    <h2>Lorem Ipsum</h2>
-                    <p>99€</p>
-                </div>
-            </a>
-
-            <a href="product_page.html">
-                <div class="product">
-                    <img src="static/img/intro-site.png" alt="intro-site">
-                    <h2>Lorem Ipsum</h2>
-                    <p>99€</p>
-                </div>
-            </a>
-
-            <a href="product_page.html">
-                <div class="product">
-                    <img src="static/img/intro-site.png" alt="intro-site">
-                    <h2>Lorem Ipsum</h2>
-                    <p>99€</p>
-                </div>
-            </a>
-
-            <a href="product_page.html">
-                <div class="product">
-                    <img src="static/img/intro-site.png" alt="intro-site">
-                    <h2>Lorem Ipsum</h2>
-                    <p>99€</p>
-                </div>
-            </a>
-
-            <a href="product_page.html">
-                <div class="product">
-                    <img src="static/img/intro-site.png" alt="intro-site">
-                    <h2>Lorem Ipsum</h2>
-                    <p>99€</p>
-                </div>
-            </a>
-        </div>
+        <div class="list" id="product_list"></div>
     </div>
     <script src="js/global.js"></script>
+    <script src="js/list.js" type="module"></script>
 </body>
 </html>
