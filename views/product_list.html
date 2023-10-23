@@ -8,108 +8,149 @@
     <title>Pedalize's Products</title>
 </head>
 <body>
-    <div class="filters">
-        <div class="top">
-            <div class="left">
-                <h1>Filtres</h1>
-                <p id="clean_filters">Nettoyer les filtres</p>
-            </div>
-            <div class="right">
-                <div class="filter_by">
-                    <p>Trier par</p>
-                    <details class="select">
-                        <summary class="radios">Auswählen...</summary>
-                        <ul class="list">
-                            <li>Item 1</li>
-                            <li>Item 2</li>
-                            <li>Item 3</li>
-                            <li>Item 4</li>
-                            <li>Item 5</li>
-                        </ul>
-                    </details>
-                </div>
-                <p id="product_count">Affiche N produits</p>
-            </div>
+<nav id="navbar">
+    <section class="left">
+        <div class="graphic-logo">
+            <img src="./static/img/logo-pedalize.svg" alt="Pedalize">
         </div>
 
-        <div class="categories">
-            <details>
-                <summary>Age et sexe</summary>
-                <div class="ctg">
-                    <label class="radio">
-                        <input type="radio" name="age_sexe">
-                        <div>
-                            <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
-                                <title>checkmark-circle</title>
-                                <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
-                            </svg>
-                        </div>
-                        <p>Homme</p>
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="age_sexe">
-                        <div>
-                            <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
-                                <title>checkmark-circle</title>
-                                <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
-                            </svg>
-                        </div>
-                        <p>Femme</p>
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="age_sexe">
-                        <div>
-                            <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
-                                <title>checkmark-circle</title>
-                                <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
-                            </svg>
-                        </div>
-                        <p>Enfant</p>
-                    </label>
+        <div class="logo-pedalize">
+            <img src="static/img/graphic-logo-pedalize.svg" alt="Pedalize">
+        </div>
+    </section>
+
+    <section class="buttons">
+        <ul>
+            <li><a href="./product_page.html">Boutique</a></li>
+            <li><a href="./index.html">Notre savoir faire</a></li>
+            <li>Contact</li>
+        </ul>
+        <a href="">Log<span>in</span></a>
+        <div class="desktop-search">
+            <img class="search-icon" src="./static/img/search-icon.svg" alt="search icon">
+            <input type="text" placeholder="Rechercher">
+        </div>
+    </section>
+
+    <section class="right">
+        <button class="burger-menu">
+            <img src="static/img/burger-menu-icon.svg" alt="Burger menu">
+        </button>
+        <div class="desktop-right">
+            <a href="cart.html" class="market-logo">
+                <img src="static/img/market-logo.svg" alt="market logo">
+            </a>
+            <a href="" class="log-in__button">
+                log<span class="log-in__green">in</span>
+            </a>
+        </div>
+    </section>
+</nav>
+    <div class="container">
+        <div class="filters">
+            <div class="top">
+                <div class="left">
+                    <h1>Filtres</h1>
+                    <p id="clean_filters">Nettoyer les filtres</p>
                 </div>
-            </details>
+                <div class="right">
+                    <div class="filter_by">
+                        <p>Trier par</p>
+                        <details class="select">
+                            <summary class="radios">Auswählen...</summary>
+                            <ul class="list">
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                                <li>Item 4</li>
+                                <li>Item 5</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <p id="product_count">Affiche N produits</p>
+                </div>
+            </div>
+
+            <div class="categories">
+                <details>
+                    <summary>Age et sexe</summary>
+                    <div class="ctg">
+                        <label class="radio">
+                            <input type="radio" name="age_sexe">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Homme</p>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="age_sexe">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Femme</p>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="age_sexe">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Enfant</p>
+                        </label>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="list">
+            <a href="product_page.html">
+                <div class="product">
+                    <img src="static/img/intro-site.png" alt="intro-site">
+                    <h2>Lorem Ipsum</h2>
+                    <p>99€</p>
+                </div>
+            </a>
+
+            <a href="product_page.html">
+                <div class="product">
+                    <img src="static/img/intro-site.png" alt="intro-site">
+                    <h2>Lorem Ipsum</h2>
+                    <p>99€</p>
+                </div>
+            </a>
+
+            <a href="product_page.html">
+                <div class="product">
+                    <img src="static/img/intro-site.png" alt="intro-site">
+                    <h2>Lorem Ipsum</h2>
+                    <p>99€</p>
+                </div>
+            </a>
+
+            <a href="product_page.html">
+                <div class="product">
+                    <img src="static/img/intro-site.png" alt="intro-site">
+                    <h2>Lorem Ipsum</h2>
+                    <p>99€</p>
+                </div>
+            </a>
+
+            <a href="product_page.html">
+                <div class="product">
+                    <img src="static/img/intro-site.png" alt="intro-site">
+                    <h2>Lorem Ipsum</h2>
+                    <p>99€</p>
+                </div>
+            </a>
         </div>
     </div>
-    <div class="list">
-        <a href="product_page.html">
-            <div class="product">
-                <img src="static/img/intro-site.png" alt="intro-site">
-                <h2>Lorem Ipsum</h2>
-                <p>99€</p>
-            </div>
-        </a>
-
-        <a href="product_page.html">
-            <div class="product">
-                <img src="static/img/intro-site.png" alt="intro-site">
-                <h2>Lorem Ipsum</h2>
-                <p>99€</p>
-            </div>
-        </a>
-
-        <a href="product_page.html">
-            <div class="product">
-                <img src="static/img/intro-site.png" alt="intro-site">
-                <h2>Lorem Ipsum</h2>
-                <p>99€</p>
-            </div>
-        </a>
-
-        <a href="product_page.html">
-            <div class="product">
-                <img src="static/img/intro-site.png" alt="intro-site">
-                <h2>Lorem Ipsum</h2>
-                <p>99€</p>
-            </div>
-        </a>
-
-        <a href="product_page.html">
-            <div class="product">
-                <img src="static/img/intro-site.png" alt="intro-site">
-                <h2>Lorem Ipsum</h2>
-                <p>99€</p>
-            </div>
-        </a>
-    </div>
+    <script src="js/global.js"></script>
 </body>
 </html>
