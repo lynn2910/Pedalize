@@ -12,7 +12,14 @@ pub(crate) struct Product {
     pub name: String,
     pub description: Option<String>,
     pub price: u64,
-    pub image: Option<String>,
+
+    pub main_image: Option<String>,
+    pub second_image: Option<String>,
+    pub third_image: Option<String>,
+    pub fourth_image: Option<String>,
+
+    pub size: bool,
+    pub wheel_size: bool
 }
 
 impl Product {
@@ -29,9 +36,9 @@ impl Product {
             .await
     }
 
-    async fn get_characteristics(pool: &MySqlPool, id: &str) -> Result<Vec<ProductCharacteristic>, sqlx::Error> {
-        ProductCharacteristic::get_product_characteristics(pool, id).await
-    }
+    // async fn get_characteristics(pool: &MySqlPool, id: &str) -> Result<Vec<ProductCharacteristic>, sqlx::Error> {
+    //     ProductCharacteristic::get_product_characteristics(pool, id).await
+    // }
 }
 
 #[derive(sqlx::FromRow, Serialize, Deserialize, Clone)]
@@ -70,7 +77,7 @@ const GET_ALL_REVIEWS_QUERY: &str = r#"SELECT
     c.username AS username
 FROM
     reviews
-LEFT JOIN clients c on reviews.user = c.id
+RIGHT JOIN clients c on reviews.user = c.id
 WHERE product = ?;"#;
 
 impl Review {

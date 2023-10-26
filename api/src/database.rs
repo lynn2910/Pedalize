@@ -1,11 +1,9 @@
 use std::error::Error;
 use std::fs;
-use std::ops::Deref;
 use std::sync::Arc;
 use serde::{Deserialize, Serialize};
 use sqlx::mysql::MySqlConnectOptions;
-use sqlx::{MySql, MySqlPool};
-use sqlx::pool::PoolConnection;
+use sqlx::MySqlPool;
 use tokio::sync::{RwLock, RwLockReadGuard};
 use tracing::error;
 
@@ -59,11 +57,6 @@ impl Database {
             pool: Arc::new(RwLock::new(conn.unwrap()))
         }
     }
-
-    pub(crate) async fn gain_connection(&self) -> Result<PoolConnection<MySql>, sqlx::Error> {
-        self.pool.read().await.acquire().await
-    }
-
     pub(crate) async fn get_pool(&self) -> RwLockReadGuard<'_, MySqlPool> {
         self.pool.read().await
     }

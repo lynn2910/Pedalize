@@ -21,9 +21,16 @@ CREATE OR REPLACE TABLE product (
     name VARCHAR(256) NOT NULL,
     description VARCHAR(2048),
     price INT UNSIGNED NOT NULL DEFAULT 1,
-    image VARCHAR(256),
 
-    UNIQUE (image),
+    main_image VARCHAR(256), -- Can be null :)
+    second_image VARCHAR(256), -- Can be null :)
+    third_image VARCHAR(256), -- Can be null :)
+    fourth_image VARCHAR(256), -- Can be null :)
+
+    size TINYINT NOT NULL DEFAULT 0,
+    wheel_size TINYINT NOT NULL DEFAULT 0,
+
+    UNIQUE (main_image, second_image, third_image, fourth_image),
     CHECK (price > 0),
     PRIMARY KEY (id)
 );
@@ -89,14 +96,13 @@ INSERT INTO clients VALUE (
     'Test'
 );
 
-INSERT INTO product VALUE (
+INSERT INTO product (id, name, description, price) VALUE (
     '30dfd1d3-76bd-4c3b-b988-dd8235f7f238',
     'Kit anti-crevaison',
     'Kit anti-crevaison pour vélo',
-    10,
-    NULL
+    10
 );
-INSERT INTO product (id, name, description, price, image) VALUES
+INSERT INTO product (id, name, description, price, main_image) VALUES
     ('d2c0b25c-e39a-43d4-8f06-ce5ed2d7919c', 'Casque de cyclisme', 'Casque léger et aérodynamique pour une protection optimale lors de vos sorties à vélo.', 79.99, 'casque_cyclisme.jpg'),
     ('dcfd55fd-5891-41a8-a5b4-9ee4ff00a576', 'Maillot de cyclisme', 'Maillot respirant en tissu technique pour une performance maximale sur la route.', 49.99, 'maillot_cyclisme.jpg'),
     ('7a555048-64ae-4089-82de-2d9db6034e19', 'Pneus de vélo de route', 'Pneus haute performance offrant une adhérence exceptionnelle sur les routes asphaltées.', 29.99, 'pneus_route.jpg'),
@@ -112,14 +118,14 @@ INSERT INTO product_characteristic (product, name, detail) VALUE
     ('f0e22302-db5c-4277-b890-9291ca89abb3', 'Capacité', '40L');
 
 
-SELECT
-    reviews.id AS id,
-    reviews.product AS product,
-    reviews.user AS user,
-    reviews.review AS review,
-    reviews.stars AS stars,
-    c.username AS username
-FROM
-    reviews
-LEFT JOIN clients c on reviews.user = c.id
-WHERE product = ?;
+# SELECT
+#     reviews.id AS id,
+#     reviews.product AS product,
+#     reviews.user AS user,
+#     reviews.review AS review,
+#     reviews.stars AS stars,
+#     c.username AS username
+# FROM
+#     reviews
+# LEFT JOIN clients c on reviews.user = c.id
+# WHERE product = ?;

@@ -1,6 +1,5 @@
 use serde::{Deserialize, Serialize};
 use sqlx::{MySqlPool, Row};
-use sqlx::mysql::MySqlRow;
 use uuid::Uuid;
 use crate::clients::ClientId;
 use crate::product::ProductId;
