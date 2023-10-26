@@ -17,10 +17,28 @@ addEventListener("load", () => {
                 return no_product_found()
 
             cart.articles.forEach((p, index) => add_product(p, index));
+
+            update_cart_price(cart).then(null, console.error)
         },
         console.error
     )
 })
+
+async function update_cart_price(cart){
+
+    let products = await Promise.all(
+        cart.articles
+            .map(async(p) => (await api.get_product(p.product)) || { price: 0 })
+    );
+    console.log(products);
+    let price = products.reduce((a,b) => a += b.price, 0);
+
+    console.log(cart, price)
+    document.getElementById("price")
+        .textContent = `${price}€`;
+    document.getElementById("total_price")
+        .textContent = `${price}€`;
+}
 
 function clear_container(){
     let container = document.getElementById("product_container");

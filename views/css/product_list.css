@@ -1,8 +1,14 @@
+body {
+    overflow: hidden;
+}
+
 .filters {
     height: 400px;
     background: #f6f6f6;
     width: 100%;
     margin: 30px auto;
+
+    overflow-y: scroll;
 }
 
 .list {

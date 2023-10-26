@@ -176,6 +176,25 @@ class PedalizeApi {
         }
     }
 
+
+    async add_article_to_cart(id: string): Promise<Object> {
+        const req = new RequestBuilder(`${this.config.host}/shopping_cart/articles/add`);
+        req.set_method("POST");
+        req.set_body(
+            new URLSearchParams({
+                product: id
+            })
+        );
+
+        try {
+            const res = await req.send();
+            return await res.text();
+        } catch (error) {
+            console.error(error);
+            return error;
+        }
+    }
+
     async remove_cart_article(id: string): Promise<string> {
         const req = new RequestBuilder(`${this.config.host}/shopping_cart/articles/remove`);
         req.set_method("DELETE");

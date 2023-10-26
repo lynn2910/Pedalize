@@ -1,11 +1,14 @@
 let api;
+let product_id;
 
 import * as client from './client.js';
 
 window.addEventListener("load", () => {
     api = new client.PedalizeApi('http://127.0.0.1:9999');
 
-    let product_id = get_product_id();
+    add_event_listeners();
+
+    product_id = get_product_id();
 
     api.get_product(product_id).then(
         (p) => {
@@ -87,6 +90,11 @@ function write_new_product_informations(product){
         )
 }
 
+/**
+ * Updates the product characteristics display on the page.
+ *
+ * @param {Array<Object>} characteristics - An array of objects representing the product characteristics.
+ */
 function update_product_characteristics(characteristics){
     document.querySelector(".spec_tab").innerHTML = '';
     if (characteristics.length > 0)
@@ -95,6 +103,13 @@ function update_product_characteristics(characteristics){
         document.querySelector(".spec_tab").innerHTML = '<h2>Aucune caractéristiques n\' a été précisée</h2>';
 }
 
+/**
+ * Sets the product characteristic by appending the specified HTML content to the ".spec_tab" element.
+ *
+ * @param {Object} c - The product characteristic object.
+ * @param {boolean} add_line - Determines whether to add a horizontal line after appending the content.
+ * @return {void}
+ */
 function set_product_characteristic(c, add_line){
     document.querySelector(".spec_tab")
         .innerHTML += `<section class="content">
@@ -120,4 +135,32 @@ function set_product_characteristic(c, add_line){
 function get_product_id(){
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('product');
+}
+
+
+/**
+ * Adds event listeners to specific elements on the page.
+ * @return {void}
+ */
+function add_event_listeners(){
+    document.querySelector(".add_cart")
+        .addEventListener("click", add_to_cart)
+
+    document.querySelector(".buy_now")
+        .addEventListener("click", add_to_cart)
+}
+
+/**
+ * Adds a product to the cart.
+ *
+ * @function add_to_cart
+ * @void
+ */
+function add_to_cart(){
+    api.add_article_to_cart(product_id).then(
+        () => {
+            window.location.href = "./cart.html";
+        },
+        console.error
+    )
 }

@@ -141,6 +141,23 @@ class PedalizeApi {
             }
         });
     }
+    add_article_to_cart(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const req = new RequestBuilder(`${this.config.host}/shopping_cart/articles/add`);
+            req.set_method("POST");
+            req.set_body(new URLSearchParams({
+                product: id
+            }));
+            try {
+                const res = yield req.send();
+                return yield res.text();
+            }
+            catch (error) {
+                console.error(error);
+                return error;
+            }
+        });
+    }
     remove_cart_article(id) {
         return __awaiter(this, void 0, void 0, function* () {
             const req = new RequestBuilder(`${this.config.host}/shopping_cart/articles/remove`);

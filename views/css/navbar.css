@@ -211,4 +211,9 @@
     #navbar .buttons a {
         display: none;
     }
+
+    #navbar .buttons ul a {
+        display: block;
+        color: gainsboro;
+    }
 }
