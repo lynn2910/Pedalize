@@ -2,3 +2,5 @@
 api/target/*
 api/database_config.json
 api/line_count.js
+api/api.exe
+api/database_config.json
