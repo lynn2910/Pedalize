@@ -63,7 +63,7 @@
 }
 
 #navbar .buttons:not(.active) {
-    transform: translateY(-500%);
+    transform: translateY(-520%);
     z-index: -1;
 }
 
