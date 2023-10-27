@@ -109,6 +109,8 @@
     display: block;
     text-decoration: none;
     color: black;
+    font-size: 35px;
+    margin-top: 20px;
 }
 
 #navbar .buttons a span{
@@ -119,6 +121,9 @@
     height: max-content;
     padding-bottom: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    right: 0;
+    left: 0;
 }
 
 
@@ -173,6 +178,11 @@
 
     #navbar .buttons li {
         margin: 0 10px;
+    }
+
+    #navbar .buttons li a {
+        font-size: 16px;
+        margin-top: 0;
     }
 
     #navbar .buttons:not(.active):hover, #navbar .buttons.active:hover {
