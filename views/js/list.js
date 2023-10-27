@@ -55,7 +55,7 @@ function add_article(product) {
     let style = "";
     console.log(product, product.main_image)
     if (product.main_image) {
-        style = `background: center url('static/img/${product.main_image}')`
+        style = `background: center no-repeat url('static/img/${product.main_image}')`
     }
     console.log(style)
 

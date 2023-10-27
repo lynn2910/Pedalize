@@ -21,6 +21,7 @@ section.newsletter{
     padding-top: 0px;
     max-width:100%;
     height: 50%;
+    margin: 0 auto;
 }
 
 div.newsletter{
@@ -28,7 +29,7 @@ div.newsletter{
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-
+    margin: 0 auto;
 }
 
 h1.newsletter{
@@ -72,6 +73,8 @@ section.link{
     align-items: start;
     padding-left: var(--link-padding);
     padding-right: var(--link-padding);
+
+    margin: auto;
 }
 
 div.shop{
