@@ -45,7 +45,6 @@ body {
     .event {
         display: flex;
         flex-direction: row;
-        justify-content: justify; /* Centre horizontalement */
         align-items: center; /* Centre verticalement */
     }
 
@@ -180,7 +179,6 @@ section.container-events section.event {
 section.container-events button.button-discover {
     background-color: #5EB10B; /* Couleur de fond du bouton */
     color: #ffffff; /* Couleur de la police du bouton */
-    font-family: Arial, sans-serif; /* Police du texte du bouton */
     /*font-size: 25px; /* Taille de la police */
     /*width: 400px;*/
     height: auto;
