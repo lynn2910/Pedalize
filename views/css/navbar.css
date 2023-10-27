@@ -10,9 +10,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    position: relative;
     z-index: 3;
     transition: all 200ms ease;
+
+    width: calc(100vw - 4rem);
+
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #navbar.active {

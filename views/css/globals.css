@@ -5,6 +5,10 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+main {
+    margin-top: 80px;
+}
+
 input[type="text"] {
     padding: 15px 25px;
     border: 1px solid #000;

@@ -53,9 +53,11 @@ function add_article(product) {
     let list = document.getElementById("product_list");
 
     let style = "";
-    if (product.image) {
-        style = `style="background: center url('static/img/${product.image}')"`
+    console.log(product, product.main_image)
+    if (product.main_image) {
+        style = `background: center url('static/img/${product.main_image}')`
     }
+    console.log(style)
 
     list.innerHTML += `<a href="product_page.html?product=${product.id}">
         <div class="product">
